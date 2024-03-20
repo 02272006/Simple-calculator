@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
 const answer = await inquirer.prompt([
@@ -22,5 +24,7 @@ if (answer.operator === "ADDITION"){
 }else if(answer.operator === "DIVISION"){
     console.log(answer.firstNumber / answer.SecondNumber);
 }
-else{"Please select the correct operator"};
+else{
+  console.log(`please select a valid operator`);
+}
 
